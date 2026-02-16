@@ -17,7 +17,10 @@ export default function HeroSection() {
             height={400}
             className="w-full h-auto"
           />
-    <div className="absolute bottom-0 h-[132px] w-[342px] items-center justify-center left-[50%] translate-x-[-50%]">
+    <div className="absolute bottom-0 
+    h-[132px] w-[342px] 
+    items-center justify-center 
+    left-[50%] translate-x-[-50%]">
             <button className={`${playfair.className} text-[#06434F] bg-white w-full h-full rounded-[80px] text-[54px] `}>
               ADQUIRA
           </button>

@@ -22,7 +22,7 @@ export default function Footer() {
         height={80}
       />
 
-      <div className="text-sm flex items-center gap-6">
+      <div className="flex flex-col items-center gap-6 sm:flex-row text-sm">
         <Link href="#" className="hover:text-gray-500">
           Termos de Uso
         </Link>  

@@ -8,12 +8,12 @@ export default function KnowItBlue() {
           <Title title="Our Line 🌿"  bgidDark={false}/>
         </div>
 
-          <div className="flex flex-wrap gap-4 justify-center gap-[150px]">
-            <KnowItBlueCard title="Sabonete Facial" src="/produtos/itblueproduto.png" hasButton={false}/>
-            <KnowItBlueCard title="Sabonete Facial" src="/produtos/itblueproduto.png" hasButton={false}/>
-            <KnowItBlueCard title="Sabonete Facial" src="/produtos/itblueproduto.png" hasButton={false}/>
-            <KnowItBlueCard title="Sabonete Facial" src="/produtos/itblueproduto.png" hasButton={false}/>
-        </div>
+<div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-4 gap-4 justify-items-center">
+    <KnowItBlueCard title="Sabonete Facial" src="/produtos/itblueproduto.png" hasButton={false}/>
+    <KnowItBlueCard title="Sabonete Facial" src="/produtos/itblueproduto.png" hasButton={false}/>
+    <KnowItBlueCard title="Sabonete Facial" src="/produtos/itblueproduto.png" hasButton={false}/>
+    <KnowItBlueCard title="Sabonete Facial" src="/produtos/itblueproduto.png" hasButton={false}/>
+</div>
     </div>
   );
 }
