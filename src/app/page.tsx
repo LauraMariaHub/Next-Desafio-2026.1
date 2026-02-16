@@ -12,7 +12,6 @@ export default function Home() {
     <KnowItBlue />
     <MVV />
     <BestSellers/>
-    <Products/>
     </div>
     
   </div>

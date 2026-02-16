@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 const links = [
-  { href: "/inicial", label: "Página Inicial" },
+  { href: "/", label: "Página Inicial" },
   { href: "/produtos", label: "Produtos" },
   { href: "/login", label: "Login" },
   { href: "/contato", label: "Contato" },
