@@ -7,7 +7,7 @@ export default function Footer() {
     <div className="
       bg-white
       w-full
-      mt-24
+      mt-0
       px-[60px]
       py-8
       min-h-[180px]
