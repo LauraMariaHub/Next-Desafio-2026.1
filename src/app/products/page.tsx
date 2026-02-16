@@ -1,5 +1,5 @@
 import Pagination from "@/components/pagination";
-import Search from "@/components/search";
+import Search from "@/components/search-box";
 
 export default function Page() {
     return(

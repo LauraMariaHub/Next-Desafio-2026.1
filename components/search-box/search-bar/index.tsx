@@ -1,10 +1,10 @@
 import { Search } from "lucide-react";
 
-type SecondarySearchProps = {
+type SearchBarProps = {
   count?: number; 
 };
 
-export default function SecondarySearch({ count }: SecondarySearchProps) {
+export default function SearchBar({ count }: SearchBarProps) {
   return (
     <div className="w-full max-w-[600px] px-4 py-10">
       <div className="relative flex items-center w-full h-[60px]">

@@ -1,5 +1,5 @@
 import Products from "../products";
-import SecondarySearch from "./secondary-search";
+import SecondarySearch from "./search-bar";
 
 export default function Search() {
     return (
