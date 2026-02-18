@@ -12,13 +12,13 @@ const noto = Noto_Serif({
 });
 
 type ProductsCardProps = {
-  title: string;
+  text: string;
   description?: string;
   preco?: string;
   src: string;
 }
 
-export default function ProductsCard({ title, description, preco, src }: ProductsCardProps) {
+export default function ProductsCard({ text, description, preco, src }: ProductsCardProps) {
   return (
 
     <div className="flex flex-col h-[650px)] w-[clamp(350px,20vw,450px)]  items-center p-8 border-[1px] border-[#06434F] mt-16">
@@ -26,7 +26,7 @@ export default function ProductsCard({ title, description, preco, src }: Product
       <div className="">
         <Image
           src={src}
-          alt={title}
+          alt={text}
           width={244}
           height={194}
           className="fit-cover"
@@ -35,7 +35,7 @@ export default function ProductsCard({ title, description, preco, src }: Product
 
       <div className="w-full flex flex-col items-center gap-5 mt-20">
         <h3 className= "font-playfair font-semibold text-3xl text-center text-[#06434F]">
-          {title}
+          {text}
         </h3>
         
         <p className= "font-playfair font-regular text-base text-center text-[clamp(0.75rem,2.5vw,0.875rem)]">

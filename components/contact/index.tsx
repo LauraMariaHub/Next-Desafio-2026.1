@@ -1,6 +1,6 @@
 import FormCard from "@/components/form-card";
 import Image from "next/image";
-import Title from "../title";
+import Heading from "../heading";
 
 export default function Contact() {
     return (
@@ -13,13 +13,13 @@ export default function Contact() {
             width={70}
             height={70}
             />
-            <Title title="Fale Conosco!" font="font-playfair" />
+            <Heading text="Fale Conosco!" font="font-playfair" textSize="3rem"/>
             </div>
 
-            <FormCard title="Nome" description="Digite seu nome" roundedActive={true} maxwidth="w-[70%]"/>
-            <FormCard title="E-mail" description="Digite seu e-mail" roundedActive={true} maxwidth="w-[70%]"/>
-            <FormCard title="Assunto" description="Digite O Motivo do Contato" roundedActive={true}  maxwidth="w-[70%]"/>
-            <FormCard title="Mensagem" description="Escreva detalhadamente sua dúvida ou motivaçao para contato." roundedActive={true} maxheight="h-[400px]" maxwidth="w-[70%]"/>
+            <FormCard text="Nome" description="Digite seu nome" roundedActive={true} maxwidth="w-[70%]"/>
+            <FormCard text="E-mail" description="Digite seu e-mail" roundedActive={true} maxwidth="w-[70%]"/>
+            <FormCard text="Assunto" description="Digite O Motivo do Contato" roundedActive={true}  maxwidth="w-[70%]"/>
+            <FormCard text="Mensagem" description="Escreva detalhadamente sua dúvida ou motivaçao para contato." roundedActive={true} maxheight="h-[400px]" maxwidth="w-[70%]"/>
         </div>
     )
 }

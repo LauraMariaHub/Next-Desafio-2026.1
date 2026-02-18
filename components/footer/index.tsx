@@ -8,9 +8,9 @@ export default function Footer() {
       bg-white
       w-full
       mt-0
-      px-[60px]
-      py-8
-      min-h-[180px]
+      px-4
+      min-h-[150px]
+      py-4
       flex
       items-center
       justify-between

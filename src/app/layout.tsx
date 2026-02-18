@@ -20,7 +20,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "itblue",
+  text: "itblue",
   description: "Uma marca de skincare desenvolvida para a pele contemporânea",
 };
 

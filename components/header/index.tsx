@@ -11,7 +11,7 @@ const links = [
 
 export default function Header() {
   return (
-    <header className="bg-white w-full h-20 px-[60px] shadow-md">
+    <header className="bg-white w-full h-20 px-[60px] shadow-md ">
       <div className="flex items-center justify-between h-full">
         
         <Link href="/" className="flex items-center">
