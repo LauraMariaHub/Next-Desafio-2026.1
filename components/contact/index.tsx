@@ -16,6 +16,14 @@ export default function Contact() {
             <Heading text="Fale Conosco!" font="font-playfair" textSize="3rem"/>
             </div>
 
+            <Image 
+            src="/details/water.png"
+            width={500}
+            height={600}
+            alt="water background"
+             className="absolute z-10 -left-65 top-20 hidden lg:block"
+            />
+
             <FormCard text="Nome" description="Digite seu nome" roundedActive={true} maxwidth="w-[70%]"/>
             <FormCard text="E-mail" description="Digite seu e-mail" roundedActive={true} maxwidth="w-[70%]"/>
             <FormCard text="Assunto" description="Digite O Motivo do Contato" roundedActive={true}  maxwidth="w-[70%]"/>

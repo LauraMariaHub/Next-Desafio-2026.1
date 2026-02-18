@@ -1,9 +1,10 @@
 import Heading from "../heading";
 import MVVCard from "./cards";
+import Image from "next/image";
 
 export default function MVV() {
   return (
-    <div className="w-full bg-black p-10">
+    <div className="w-full bg-black p-10 overflow-hidden">
 
         <div className="w-full pl-15 pr-15 justify-center items-center">
             <Heading text="Sobre Nós" legend="A It Blue é uma marca de 
@@ -13,6 +14,14 @@ export default function MVV() {
             transparência e a performance, garantindo que cada gota do 
             seu ritual entregue exatamente o que a sua pele precisa para brilhar." bgDark={true}/>
         </div>
+
+                <Image 
+                src="/details/water.png"
+                width={600}
+                height={600}
+                alt="water background"
+                className="absolute z-10 -left-80 top-290 hidden 2xl:block"
+                />
         
          <div className="flex flex-wrap justify-center gap-[150px] p-10">
 
