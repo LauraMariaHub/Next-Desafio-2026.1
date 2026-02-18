@@ -1,11 +1,4 @@
 import Image from "next/image";
-import { Playfair_Display } from "next/font/google";
-
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  variable: "--font-playfair",
-});
-
 
 type KnowItBlueCardProps = {
   title: string;
@@ -17,7 +10,7 @@ type KnowItBlueCardProps = {
 
 export default function KnowItBlueCard({ title, description, preco, src, hasButton}: KnowItBlueCardProps) {
   
-    const button = hasButton ? <button className={`${playfair.className} text-[#FFFFFF] bg-black w-full h-full rounded-[30px] text-[12px] `}>
+    const button = hasButton ? <button className= "font-playfair text-[#FFFFFF] bg-black w-full h-full rounded-[30px] text-[12px]">
               Comprar
           </button> : null;
 
@@ -32,8 +25,8 @@ export default function KnowItBlueCard({ title, description, preco, src, hasButt
 
 
         <div className="w-full h-full flex flex-col items-center justify-center gap-2 m-10">
-        <h3 className={`${playfair.className} text-regular text-sm text-center`}>{title}</h3>
-        <h3 className={`${playfair.className} text-regular text-sm text-center`}>{preco}</h3>
+        <h3 className= "font-playfair text-regular text-sm text-center">{title}</h3>
+        <h3 className= "font-playfair text-regular text-sm text-center">{preco}</h3>
         
         <div className="items-center justify-center h-[33px]"></div>
         {button}

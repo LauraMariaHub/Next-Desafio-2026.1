@@ -1,11 +1,6 @@
 import Image from "next/image";
 import { Playfair_Display, Noto_Serif, Urbanist } from "next/font/google";
 
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  weight: ["400","700","800"],
-});
-
 const urbanist = Urbanist({
   subsets: ["latin"],
   weight: ["400","700","800"]
@@ -39,11 +34,11 @@ export default function ProductsCard({ title, description, preco, src }: Product
       </div>
 
       <div className="w-full flex flex-col items-center gap-5 mt-20">
-        <h3 className={`${playfair.className} font-semibold text-3xl text-center text-[#06434F]`}>
+        <h3 className= "font-playfair font-semibold text-3xl text-center text-[#06434F]">
           {title}
         </h3>
         
-        <p className={`${playfair.className} font-regular text-base text-center text-justify text-[clamp(0.75rem,2.5vw,0.875rem)]`}>
+        <p className= "font-playfair font-regular text-base text-center text-[clamp(0.75rem,2.5vw,0.875rem)]">
           {description}
         </p>
         
