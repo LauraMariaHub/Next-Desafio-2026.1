@@ -26,15 +26,15 @@ type ProductsCardProps = {
 export default function ProductsCard({ title, description, preco, src }: ProductsCardProps) {
   return (
 
-    <div className="flex flex-col items-center p-8 w-full max-w-[508px] border-[1px] border-[#06434F] relative mt-16">
+    <div className="flex flex-col h-[650px)] w-[clamp(350px,20vw,450px)]  items-center p-8 border-[1px] border-[#06434F] mt-16">
       
-      <div className="absolute -top-20">
+      <div className="">
         <Image
           src={src}
           alt={title}
           width={244}
           height={194}
-          className="object-contain"
+          className="fit-cover"
         />
       </div>
 
@@ -43,15 +43,15 @@ export default function ProductsCard({ title, description, preco, src }: Product
           {title}
         </h3>
         
-        <p className={`${playfair.className} font-regular text-base text-center leading-snug px-2`}>
+        <p className={`${playfair.className} font-regular text-base text-center text-justify text-[clamp(0.75rem,2.5vw,0.875rem)]`}>
           {description}
         </p>
         
-        <span className={`${urbanist.className} font-extrabold text-4xl text-center`}>
+        <span className={`${urbanist.className} font-extrabold text-center text-[#06434F] text-[clamp(1.5rem,2.5vw,1.875rem)]`}>
           {preco}
         </span>
 
-        <button className={`${noto.className} font-extrabold text-[#FFFFFF] bg-[#06434F] w-full py-3 rounded-[15px] text-2xl mt-2`}>
+        <button className={`${noto.className} font-extrabold text-[#FFFFFF] bg-[#06434F] w-full py-3 rounded-[15px] mt-2 text-[clamp(0.875rem,2.5vw,1.5rem)]`}>
           Saber Mais...
         </button>
       </div>
