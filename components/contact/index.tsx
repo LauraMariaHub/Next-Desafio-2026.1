@@ -13,7 +13,7 @@ export default function Contact() {
                     width={70}
                     height={70}
                 />
-                <Heading text="Fale Conosco!" font="font-playfair" textSize="3rem" />
+                <Heading text="Fale Conosco!" fontText="font-playfair" textSize="3rem" />
             </div>
 
             <Image

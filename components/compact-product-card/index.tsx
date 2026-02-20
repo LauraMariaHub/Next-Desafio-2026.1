@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-type KnowItBlueCardProps = {
+type CompactCardProps = {
   text: string;
   description?: string;
   preco?: string;
@@ -8,23 +8,25 @@ type KnowItBlueCardProps = {
   hasButton: boolean;
 }
 
-export default function KnowItBlueCard({ text, description, preco, src, hasButton }: KnowItBlueCardProps) {
+export default function CompactCard({ text, description, preco, src, hasButton }: CompactCardProps) {
 
   const button = hasButton ? <button className="font-playfair text-[#FFFFFF] bg-black w-full h-full rounded-[30px] text-[12px]">
     Comprar
   </button> : null;
 
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="flex flex-col items-center justify-center w-full max-w-[150px] min-h-[250px]">
+
+      <div className="relative aspect-square w-full">
       <Image
         src={src}
         alt={text}
-        width={122}
-        height={164}
+        fill
+        className="object-cover"
       />
+      </div>
 
-
-      <div className="w-full h-full flex flex-col items-center justify-center gap-2 m-10">
+      <div className="w-full h-full flex flex-col items-center justify-center gap-2 m-5">
         <h3 className="font-playfair text-regular text-sm text-center">{text}</h3>
         <h3 className="font-playfair text-regular text-sm text-center">{preco}</h3>
 

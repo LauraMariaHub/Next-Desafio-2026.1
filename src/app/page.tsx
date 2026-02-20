@@ -1,6 +1,6 @@
 import BestSellers from "@/components/best-sellers";
 import HeroSection from "@/components/hero-section";
-import KnowItBlue from "@/components/know-itblue";
+import CollectionItem from "@/components/collection-Item";
 import MVV from "@/components/mvv";
 import Products from "@/components/products";
 
@@ -9,7 +9,7 @@ export default function Home() {
   <div>
     <HeroSection />
     <div className=" ">
-    <KnowItBlue />
+    <CollectionItem />
     <MVV />
     <BestSellers/>
     </div>

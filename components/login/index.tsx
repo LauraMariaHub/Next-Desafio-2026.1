@@ -12,11 +12,11 @@ export default function Login() {
                         lg:rounded-[12px]">
 
             <div className="flex flex-col items-center justify-center gap-8 p-10">
-                <Heading text="ENTRAR" font="font-playfair" textSize="3.75rem" />
+                <Heading text="ENTRAR" fontText="font-playfair" textSize="3.75rem" />
                 <FormCard description="Nome" maxwidth="w-3/4" />
                 <FormCard description="E-mail" maxwidth="w-3/4" />
                 <FormCard description="Senha" maxwidth="w-3/4" />
-                <Heading legend="Recuperar senha" font="font-playfair" />
+                <Heading legend="Recuperar senha" fontText="font-playfair" />
             </div>
         </div>
     )

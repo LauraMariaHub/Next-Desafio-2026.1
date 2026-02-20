@@ -1,5 +1,5 @@
 import Heading from "../heading";
-import KnowItBlueCard from '@/components/know-itblue/card'
+import CompactCard from '@/components/compact-product-card'
 import Image from "next/image";
 
 export default function BestSellers() {
@@ -19,10 +19,10 @@ export default function BestSellers() {
 
 
       <div className="flex flex-wrap gap-[150px] justify-center">
-        <KnowItBlueCard text="Creme Facial" preco="R$0,00" src="/produtos/itblueproduto2.png" hasButton={true} />
-        <KnowItBlueCard text="Creme Facial" preco="R$0,00" src="/produtos/itblueproduto2.png" hasButton={true} />
-        <KnowItBlueCard text="Creme Facial" preco="R$0,00" src="/produtos/itblueproduto2.png" hasButton={true} />
-        <KnowItBlueCard text="Creme Facial" preco="R$0,00" src="/produtos/itblueproduto2.png" hasButton={true} />
+        <CompactCard text="Creme Facial" preco="R$0,00" src="/produtos/itblueproduto2.png" hasButton={true} />
+        <CompactCard text="Creme Facial" preco="R$0,00" src="/produtos/itblueproduto2.png" hasButton={true} />
+        <CompactCard text="Creme Facial" preco="R$0,00" src="/produtos/itblueproduto2.png" hasButton={true} />
+        <CompactCard text="Creme Facial" preco="R$0,00" src="/produtos/itblueproduto2.png" hasButton={true} />
       </div>
     </div>
   );

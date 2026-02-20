@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
+import { Montserrat, Roboto } from "next/font/google";
 import { Playfair_Display } from "next/font/google";
 
 import "./globals.css";
@@ -19,6 +19,13 @@ const playfair = Playfair_Display({
   variable: "--font-playfair",
 });
 
+const roboto = Roboto({
+  weight: ["200", "400", "500", "700", "900"],
+  style: ["normal"],
+  subsets: ["latin"],
+  variable: "--font-roboto",
+});
+
 export const metadata: Metadata = {
   text: "itblue",
   description: "Uma marca de skincare desenvolvida para a pele contemporânea",
@@ -32,7 +39,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${montserrat.className} ${playfair.variable} antialiased`}>
+        className={`${montserrat.className} ${playfair.variable} ${roboto.variable} antialiased`}>
           <Header/>
         {children}
           <Footer/>

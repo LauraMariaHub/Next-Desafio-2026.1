@@ -2,4 +2,6 @@
 
 @theme {
     --font-playfair: var(--font-playfair);
+    --font-montserrat: var(--font-montserrat);
+    --font-roboto: var(--font-roboto);
 }
