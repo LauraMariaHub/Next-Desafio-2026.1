@@ -16,9 +16,9 @@ export default function Pagination({ currentPage, totalPages }: PaginationProps)
         <button
           key={page}
           className={`w-8 h-8 flex items-center justify-center font-serif text-lg transition-colors
-            ${page === currentPage 
-              ? "bg-[#BDD1D6] text-[#06434F] font-bold" 
-              : "bg-[#E0F2F7] text-[#06434F] hover:bg-[#CFE9F2]" 
+            ${page === currentPage
+              ? "bg-[#BDD1D6] text-[#06434F] font-bold"
+              : "bg-[#E0F2F7] text-[#06434F] hover:bg-[#CFE9F2]"
             }`}
         >
           {page}
