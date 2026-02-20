@@ -24,15 +24,15 @@ export default function Footer() {
 
       <div className="flex flex-col items-center gap-6 sm:flex-row text-sm">
         <Link href="#" className="hover:text-gray-500">
-          Termos de Uso
+        Termos de Uso
         </Link>  
 
         <Link href="#" className="hover:text-gray-500">
-          Política de Privacidade
+        Política de Privacidade
         </Link>  
 
         <Link href="#" className="hover:text-gray-500">
-          Nos contate
+        Nos contate
         </Link>
 
         <Image
