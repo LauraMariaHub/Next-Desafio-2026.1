@@ -20,7 +20,7 @@ export default function MVV() {
         width={600}
         height={600}
         alt="water background"
-        className="absolute z-10 -left-80 top-290 hidden 2xl:block"
+        className="absolute z-10 -left-90 top-290 hidden 2xl:block"
       />
 
       <div className="flex flex-wrap justify-center gap-[150px] p-10">
