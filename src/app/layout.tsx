@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { Montserrat, Roboto } from "next/font/google";
-import { Playfair_Display } from "next/font/google";
+import { Montserrat, Roboto, Playfair_Display, Noto_Serif, Urbanist, Noto_Serif_Telugu} from "next/font/google";
+import {  } from "next/font/google";
 
 import "./globals.css";
 import Header from "@/components/header";
@@ -10,6 +10,7 @@ const montserrat = Montserrat({
   weight: ["400", "500", "600", "700", "800"],
   style: ["normal"],
   subsets: ["latin"],
+  variable: "--font-montserrat"
 });
 
 const playfair = Playfair_Display({
@@ -20,11 +21,36 @@ const playfair = Playfair_Display({
 });
 
 const roboto = Roboto({
-  weight: ["200", "400", "500", "700", "900"],
+  weight: ["100", "400", "500", "700", "900"],
   style: ["normal"],
   subsets: ["latin"],
   variable: "--font-roboto",
 });
+
+const urbanist = Urbanist({
+  subsets: ["latin"],
+  weight: ["100", "400", "500", "700", "900"],
+  variable: "--font-urbanist"
+});
+
+const noto = Noto_Serif({
+  subsets: ['latin'],
+  weight: ['400', '700', '800'],
+  variable: "--font-noto"
+});
+
+const noto_serif = Noto_Serif_Telugu({
+  subsets: ['latin'],
+  weight: ['400', '700', '800', '900'],
+  variable: "--font-noto-serif"
+});
+
+type ProductsCardProps = {
+  text: string;
+  description?: string;
+  preco?: string;
+  src: string;
+}
 
 export const metadata: Metadata = {
   text: "itblue",
@@ -39,7 +65,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${montserrat.className} ${playfair.variable} ${roboto.variable} antialiased`}>
+        className={`${montserrat.variable} ${playfair.variable} ${roboto.variable} ${urbanist.variable} 
+        ${noto.variable} ${noto_serif.variable} antialiased`}>
           <Header/>
         {children}
           <Footer/>

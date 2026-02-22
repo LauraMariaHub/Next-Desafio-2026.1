@@ -2,33 +2,30 @@ type HeadingProps = {
   text?: string;
   legend?: string;
   bgDark?: boolean;
-  fontText?: string;
+  classNameText?: string;
+  classNameLegend?: string;
   minTextSize?: string;
   textSize?: string;
-  legendSize?: string;
-  legendAlign?: string;
-  fontLegend?: string;
 }
 
 export default function Heading({ 
   text, 
   legend, 
   bgDark, 
-  fontText, 
   minTextSize = "1.5rem",
   textSize = "1.87rem", 
-  legendSize = "text-base", 
-  legendAlign = "text-center",
-  fontLegend }: HeadingProps) {
+  classNameLegend = "text-base text-center",
+  classNameText
+  }: HeadingProps) {
 
   const bgColor = bgDark ? "text-[#BCD2DE]" : "text-[#06434F]";
 
   return (
-    <div className="flex flex-col justify-center items-center mt-6 gap-3">
-      <h1 className={`font-semibold ${bgColor} ${fontText}`}
+    <div className="flex flex-col justify-center items-center mt-6 gap-7">
+      <h1 className={`font-semibold ${bgColor} ${classNameText}`}
         style={{ fontSize: `clamp(${minTextSize}, 4vw, ${textSize})` }}
       >{text}</h1>
-      <span className={`${bgColor} ${legendAlign} ${fontLegend} ${legendSize}`}>{legend}</span>
+      <span className={`${bgColor} ${classNameLegend}`}>{legend}</span>
     </div>
 
   );

@@ -1,3 +1,4 @@
+import CustomButtom from "../custom-button";
 import FormCard from "../form-card";
 import Heading from "../heading";
 
@@ -9,15 +10,23 @@ export default function Login() {
                         lg:w-[50%] 
                         lg:aspect-square
                         lg:max-w-[700px]
-                        lg:rounded-[12px]">
+                        lg:rounded-[12px]
+                        p-10">
 
-            <div className="flex flex-col items-center justify-center gap-8 p-10">
-                <Heading text="ENTRAR" fontText="font-playfair" textSize="3.75rem" />
+            <div className="flex flex-col items-center justify-center gap-4">
+                <Heading text="ENTRAR" classNameText="font-playfair" textSize="3.75rem" />
                 <FormCard description="Nome" maxwidth="w-3/4" />
                 <FormCard description="E-mail" maxwidth="w-3/4" />
                 <FormCard description="Senha" maxwidth="w-3/4" />
-                <Heading legend="Recuperar senha" fontText="font-playfair" />
+                <Heading legend="Recuperar senha" classNameLegend="font-playfair p-5" />
             </div>
+
+            <div className="flex w-full justify-center items-center">
+                <CustomButtom variant="primary">
+                    Entrar
+                </CustomButtom>
+            </div>
+
         </div>
     )
 }

@@ -12,7 +12,8 @@ export default function MVV() {
             soluções eficazes — da hidratação profunda ao clareamento uniforme —
             com texturas leves e absorção inteligente. Nosso compromisso é com a 
             transparência e a performance, garantindo que cada gota do 
-            seu ritual entregue exatamente o que a sua pele precisa para brilhar." bgDark={true} />
+            seu ritual entregue exatamente o que a sua pele precisa para brilhar." bgDark={true}
+            classNameLegend="pl-20 pr-20 text-center" />
       </div>
 
       <Image

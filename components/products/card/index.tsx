@@ -1,15 +1,6 @@
 import Image from "next/image";
-import { Playfair_Display, Noto_Serif, Urbanist } from "next/font/google";
+import CustomButtom from "../../custom-button";
 
-const urbanist = Urbanist({
-  subsets: ["latin"],
-  weight: ["400", "700", "800"]
-});
-
-const noto = Noto_Serif({
-  subsets: ['latin'],
-  weight: ['400', '700', '800']
-});
 
 type ProductsCardProps = {
   text: string;
@@ -34,21 +25,21 @@ export default function ProductsCard({ text, description, preco, src }: Products
       </div>
 
       <div className="w-full flex flex-col items-center gap-5 mt-20">
-        <h3 className="font-playfair font-semibold text-3xl text-center text-[#06434F]">
+        <h3 className="font-playfair font-semibold text-3xl text-center text-black">
           {text}
         </h3>
 
-        <p className="font-playfair font-regular text-base text-center text-[clamp(0.75rem,2.5vw,0.875rem)]">
+        <p className="font-urbanist font-thi text-center text-[clamp(0.75rem,2.5vw,0.875rem)] line-clamp-4">
           {description}
         </p>
 
-        <span className={`${urbanist.className} font-extrabold text-center text-[#06434F] text-[clamp(1.5rem,2.5vw,1.875rem)]`}>
+        <span className= "font-urbanist font-extrabold text-center text-[#000000] text-[clamp(1.5rem,2.5vw,2.25rem)]">
           {preco}
         </span>
 
-        <button className={`${noto.className} font-extrabold text-[#FFFFFF] bg-[#06434F] w-full py-3 rounded-[15px] mt-2 text-[clamp(0.875rem,2.5vw,1.5rem)]`}>
+        <CustomButtom variant="secundary" href="/product-details">
           Saber Mais...
-        </button>
+        </CustomButtom>
       </div>
     </div>
   );
