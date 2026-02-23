@@ -24,7 +24,7 @@ export default function Contact() {
                 className="absolute z-10 -left-65 top-20 hidden lg:block"
             />
 
-            <form action="" className="w-3/4">
+            <form action="" className="w-3/5">
                 <FormCard text="Nome" description="Digite seu nome" roundedActive={true} />
                 <FormCard text="E-mail" description="Digite seu e-mail" roundedActive={true} />
                 <FormCard text="Assunto" description="Digite O Motivo do Contato" roundedActive={true} />

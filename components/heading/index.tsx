@@ -21,7 +21,7 @@ export default function Heading({
   const bgColor = bgDark ? "text-[#BCD2DE]" : "text-[#06434F]";
 
   return (
-    <div className="flex flex-col justify-center items-center mt-6 gap-7">
+    <div className="flex flex-col justify-center items-center">
       <h1 className={`font-semibold ${bgColor} ${classNameText}`}
         style={{ fontSize: `clamp(${minTextSize}, 4vw, ${textSize})` }}
       >{text}</h1>

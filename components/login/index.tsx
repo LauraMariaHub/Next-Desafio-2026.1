@@ -11,9 +11,9 @@ export default function Login() {
                         lg:aspect-square
                         lg:max-w-[700px]
                         lg:rounded-[12px]
-                        p-10">
+                        pt-30">
 
-            <div className="flex flex-col items-center justify-center gap-4">
+            <div className="flex flex-col items-center justify-center ">
                 <Heading text="ENTRAR" classNameText="font-playfair" textSize="3.75rem" />
                 <form action="" className="w-3/4">
                     <FormCard description="Nome" />

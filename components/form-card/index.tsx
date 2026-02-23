@@ -35,7 +35,7 @@ export default function FormCard({
 
     return (
         <div className="w-full flex flex-col items-center justify-center">
-            <div className="w-full items-start p-2">
+            <div className="w-full items-start p-3">
                 <h1 className="font-playfair text-sm">{text}</h1>
             </div>
 
