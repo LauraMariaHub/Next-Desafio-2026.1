@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const LinksSideBar = [
     { href: '/', label: 'Página Inicial', icon: HomeIcon },
-    { href: '/', label: 'Gerenciamento', icon: LayoutDashboard },
+    { href: '/admin', label: 'Gerenciamento', icon: LayoutDashboard },
     { href: '/', label: 'Deslogar', icon: LogOut },
 
 ]
@@ -60,7 +60,7 @@ export default function AdminSideBar() {
                                     className="flex items-center px-2 py-3 rounded-lg hover:bg-white/20"
                                 >
                                     <Icon className="size-5 text-black-400" />
-                                    <span className="ms-3 text-base text-black">
+                                    <span className="ms-3 text-base text-black font-playfair">
                                         {label}
                                     </span>
                                 </Link>

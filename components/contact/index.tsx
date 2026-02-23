@@ -24,10 +24,12 @@ export default function Contact() {
                 className="absolute z-10 -left-65 top-20 hidden lg:block"
             />
 
-            <FormCard text="Nome" description="Digite seu nome" roundedActive={true} maxwidth="w-[70%]" />
-            <FormCard text="E-mail" description="Digite seu e-mail" roundedActive={true} maxwidth="w-[70%]" />
-            <FormCard text="Assunto" description="Digite O Motivo do Contato" roundedActive={true} maxwidth="w-[70%]" />
-            <FormCard text="Mensagem" description="Escreva detalhadamente sua dúvida ou motivaçao para contato." roundedActive={true} maxheight="h-[400px]" maxwidth="w-[70%]" />
+            <form action="" className="w-3/4">
+                <FormCard text="Nome" description="Digite seu nome" roundedActive={true} />
+                <FormCard text="E-mail" description="Digite seu e-mail" roundedActive={true} />
+                <FormCard text="Assunto" description="Digite O Motivo do Contato" roundedActive={true} />
+                <FormCard text="Mensagem" description="Escreva detalhadamente sua dúvida ou motivaçao para contato." roundedActive={true} maxheight="h-[400px]" isTextArea={true} />
+            </form>
         </div>
     )
 }

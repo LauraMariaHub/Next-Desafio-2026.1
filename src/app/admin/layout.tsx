@@ -4,6 +4,7 @@ export default function AdminLayout({
   children,
 }: {
   children: React.ReactNode;
+  modal: React.ReactNode;
 }) {
   return (
     <section>

@@ -15,14 +15,16 @@ export default function Login() {
 
             <div className="flex flex-col items-center justify-center gap-4">
                 <Heading text="ENTRAR" classNameText="font-playfair" textSize="3.75rem" />
-                <FormCard description="Nome" maxwidth="w-3/4" />
-                <FormCard description="E-mail" maxwidth="w-3/4" />
-                <FormCard description="Senha" maxwidth="w-3/4" />
-                <Heading legend="Recuperar senha" classNameLegend="font-playfair p-5" />
+                <form action="" className="w-3/4">
+                    <FormCard description="Nome" />
+                    <FormCard description="E-mail" />
+                    <FormCard description="Senha" />
+                    <Heading legend="Recuperar senha" classNameLegend="font-playfair p-5" />
+                </form>
             </div>
 
             <div className="flex w-full justify-center items-center">
-                <CustomButtom variant="primary">
+                <CustomButtom variant="primary" href="/admin">
                     Entrar
                 </CustomButtom>
             </div>

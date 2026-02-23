@@ -1,4 +1,5 @@
 import Admin from "@/components/admin";
+import Link from "next/link";
 
 
 export default function Page() {
