@@ -10,7 +10,7 @@ const links = [
   { href: "/products", label: "Produtos" },
   { href: "/login", label: "Login" },
   { href: "/contact", label: "Contato" },
-  { href: "/gerenciamento", label: "Gerenciamento" },
+  { href: "/admin", label: "Gerenciamento" },
 ];
 
 export default function Header() {

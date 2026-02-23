@@ -3,8 +3,7 @@ import { Montserrat, Roboto, Playfair_Display, Noto_Serif, Urbanist, Noto_Serif_
 import {  } from "next/font/google";
 
 import "./globals.css";
-import Header from "@/components/header";
-import Footer from "@/components/footer";
+
 
 const montserrat = Montserrat({
   weight: ["400", "500", "600", "700", "800"],
@@ -67,9 +66,7 @@ export default function RootLayout({
       <body
         className={`${montserrat.variable} ${playfair.variable} ${roboto.variable} ${urbanist.variable} 
         ${noto.variable} ${noto_serif.variable} antialiased`}>
-          <Header/>
         {children}
-          <Footer/>
       </body>
     </html>
   );
