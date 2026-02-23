@@ -1,6 +1,7 @@
 import Heading from "../heading";
 import CompactCard from '@/components/compact-product-card'
 import Image from "next/image";
+import SwiperComponent from "../SwiperComponent";
 
 export default function BestSellers() {
   return (
@@ -18,11 +19,20 @@ export default function BestSellers() {
       />
 
 
-      <div className="flex flex-wrap gap-[150px] justify-center">
+      <div className="hidden md:flex md:flex-wrap md:gap-[150px] md:justify-center">
         <CompactCard text="Creme Facial" preco="R$0,00" src="/produtos/itblueproduto2.png" hasButton={true} />
         <CompactCard text="Creme Facial" preco="R$0,00" src="/produtos/itblueproduto2.png" hasButton={true} />
         <CompactCard text="Creme Facial" preco="R$0,00" src="/produtos/itblueproduto2.png" hasButton={true} />
         <CompactCard text="Creme Facial" preco="R$0,00" src="/produtos/itblueproduto2.png" hasButton={true} />
+      </div>
+
+      <div className="block md:hidden">
+        <SwiperComponent paginationActive={false}>
+          <CompactCard text="Creme Facial" preco="R$0,00" src="/produtos/itblueproduto2.png" hasButton={true} />
+          <CompactCard text="Creme Facial" preco="R$0,00" src="/produtos/itblueproduto2.png" hasButton={true} />
+          <CompactCard text="Creme Facial" preco="R$0,00" src="/produtos/itblueproduto2.png" hasButton={true} />
+          <CompactCard text="Creme Facial" preco="R$0,00" src="/produtos/itblueproduto2.png" hasButton={true} />
+        </SwiperComponent>
       </div>
     </div>
   );
