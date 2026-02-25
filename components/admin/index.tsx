@@ -1,7 +1,12 @@
 import Table from "./table"
+import { fetchAllProducts } from "@/actions/admin/actions";
 
-export default function Admin(){
+
+export default async function Admin(){
+
+    const {products,count} = await fetchAllProducts()
+
     return(
-        <Table/>
+        <Table product={products} count={count}/>
     )
 }

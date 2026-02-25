@@ -1,11 +1,10 @@
-import CustomButton from "@/components/custom-button";
 import FormCard from "@/components/form-card";
 import Heading from "@/components/heading";
+import { Product } from "@/types/data";
+import Image from "next/image";
 
-const product = {nome: "Água Micelar", preco: "R$19,90", descricao: "Água Micelar"}
 
-
-export default function ViewProduct() {
+export default function ViewProduct({ products }: { products: Product | null }) {
     return (
         <div className="
         bg-[#ECF3F4] 
@@ -21,21 +20,31 @@ export default function ViewProduct() {
 
                 <form action="" className="w-3/4">
 
+                    <div className="w-full flex flex-col justify-center items-center gap-10 p-5">
+                    <Image
+                    src="/logo/Logoitblue.png"
+                    alt="Logo da empresa"
+                    width={200}
+                     height={200}
+                     className="rounded-[20px]"
+                    />
+                    </div>
+
                     <FormCard 
                     text="Nome" 
-                    value={product.nome}
+                    value={products.text}
                     readonly={true} />
 
                     <FormCard 
                     text="Preço" 
-                    value={product.preco}
+                    value={products.price}
                     readonly={true} />
 
                     <FormCard 
                     text="Descrição do Produto" 
                     maxheight="h-[300px]"
                     isTextArea={true} 
-                    value={product.descricao}
+                    value={products.description}
                     readonly={true} />
 
                 </form>

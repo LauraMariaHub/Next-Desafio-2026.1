@@ -3,13 +3,14 @@ import CustomButtom from "../../custom-button";
 
 
 type ProductsCardProps = {
+  id: number;
   text: string;
   description?: string;
   preco?: string;
   src: string;
 }
 
-export default function ProductsCard({ text, description, preco, src }: ProductsCardProps) {
+export default function ProductsCard({ id, text, description, preco, src }: ProductsCardProps) {
   return (
 
     <div className="flex flex-col h-[650px)] w-[clamp(350px,20vw,450px)]  items-center p-8 border-[1px] border-[#06434F] mt-16">
@@ -25,7 +26,7 @@ export default function ProductsCard({ text, description, preco, src }: Products
       </div>
 
       <div className="w-full flex flex-col items-center gap-5 mt-20">
-        <h3 className="font-playfair font-semibold text-3xl text-center text-black">
+        <h3 className="font-playfair font-semibold text-3xl text-center text-black min-h-[4rem] flex items-center">
           {text}
         </h3>
 
@@ -37,7 +38,7 @@ export default function ProductsCard({ text, description, preco, src }: Products
           {preco}
         </span>
 
-        <CustomButtom variant="secundary" href="/product-details">
+        <CustomButtom variant="secundary" href={`/product-details/${id}`}>
           Saber Mais...
         </CustomButtom>
       </div>

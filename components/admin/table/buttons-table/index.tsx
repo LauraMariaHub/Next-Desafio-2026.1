@@ -1,4 +1,5 @@
 'use client'
+import { deleteProduct } from "@/actions/admin/actions"
 import { Pencil, Trash2, Eye} from "lucide-react"
 import Link from "next/link"
 
@@ -6,7 +7,7 @@ export function EditButtom({id}: {id:number}){
     return(
     <Link 
     href={`/admin/edit/${id}`}
-className="p-2 rounded-md hover:bg-green-100 transition"
+    className="p-2 rounded-md hover:bg-green-100 transition"
 >
     <Pencil className="w-5 h-5 text-white  hover:bg-green-100 transition"/>
     </Link>
@@ -16,6 +17,7 @@ className="p-2 rounded-md hover:bg-green-100 transition"
 export function DeleteButtom({id}: {id:number}){
     return(
     <button
+    onClick={()=> deleteProduct(id)}
       className="p-2 rounded-md hover:bg-green-100 transition"
     >
       <Trash2 className="w-5 h-5 text-white" />

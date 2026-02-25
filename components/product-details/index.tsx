@@ -1,12 +1,18 @@
 import ProductInfo from "./productinfo";
 import ProductGallery from "./productgallery";
 import Image from "next/image";
+import { ProductIndividualPost } from "@/types/data";
 
-export default function ProductDetails() {
+export default function ProductDetails({product}: {product: ProductIndividualPost}) {
+  
+  if (!product) {
+    return <div>Carregando...</div>; 
+  }
+
   return (
     <div className="w-full flex flex-col md:flex-row justify-center items-center gap-10 p-2">
-        <ProductGallery />
-        <ProductInfo />
+        <ProductGallery imageUrl={product.imageUrl} />
+        <ProductInfo product={product} />
 
         <Image
           src="/details/green-coconut.png"

@@ -1,12 +1,12 @@
 import Image from "next/image";
 
-export default function ProductGallery() {
+export default function ProductGallery({ imageUrl }: { imageUrl: string | null }) {
     return(
         <div className="flex flex-col items-center justify-center gap-4 p-10 w-full md:w-[40%]">
             
             <div className="relative aspect-square w-full">
                 <Image
-                src="/produtos/produtoitblue4.png"
+                src={imageUrl || "/logo/Logoitblue.png"}
                 alt="Produto ItBlue"
                 fill
                 className="object-cover border-2 border-gray-300"
@@ -17,7 +17,7 @@ export default function ProductGallery() {
 
             <div className="relative aspect-square w-1/3">
                 <Image
-                src="/produtos/produtoitblue4.png"
+                src={imageUrl || "/logo/Logoitblue.png"}
                 alt="Produto ItBlue"
                 fill
                 className="object-cover border-2 border-gray-300"
@@ -26,7 +26,7 @@ export default function ProductGallery() {
 
             <div className="relative aspect-square w-1/3">
                 <Image
-                src="/produtos/produtoitblue4.png"
+                src={imageUrl || "/logo/Logoitblue.png"}
                 alt="Produto ItBlue"
                 fill
                 className="object-cover border-2 border-gray-300"
@@ -35,7 +35,7 @@ export default function ProductGallery() {
 
             <div className="relative aspect-square w-1/3">
                 <Image
-                src="/produtos/produtoitblue4.png"
+                src={imageUrl || "/logo/Logoitblue.png"}
                 alt="Produto ItBlue"
                 fill
                 className="object-cover border-2 border-gray-300"

@@ -1,18 +1,22 @@
 import Image from "next/image";
+import Link from "next/link";
 
 type CompactCardProps = {
-  text: string;
+  id?: number;
+  text?: string;
   description?: string;
   preco?: string;
   src: string;
   hasButton: boolean;
 }
 
-export default function CompactCard({ text, description, preco, src, hasButton }: CompactCardProps) {
+export default function CompactCard({ id, text, description, preco, src, hasButton }: CompactCardProps) {
 
-  const button = hasButton ? <button className="font-playfair text-[#FFFFFF] bg-black w-full h-full rounded-[30px] text-[12px]">
+  const button = hasButton ? 
+  <Link href={`/product-details/${id}`} className="font-playfair text-[#FFFFFF] bg-black w-full h-full rounded-[30px] text-[15px] text-center pt-5 hover:bg-[#C2D4DB] transition-colors duration-300 hover:text-[#06434F]">
     Comprar
-  </button> : null;
+  </Link> : null;
+
 
   return (
     <div className="flex flex-col items-center justify-center w-full max-w-[150px] min-h-[250px]">
@@ -20,7 +24,7 @@ export default function CompactCard({ text, description, preco, src, hasButton }
       <div className="relative aspect-square w-full">
       <Image
         src={src}
-        alt={text}
+        alt={text || "null"}
         fill
         className="object-cover"
       />

@@ -1,4 +1,5 @@
 type FormCardProps = {
+    name?: string;
     text?: string;
     description?: string;
     roundedActive?: boolean;
@@ -10,6 +11,7 @@ type FormCardProps = {
 }
 
 export default function FormCard({ 
+    name,
     text, 
     description, 
     roundedActive, 
@@ -41,6 +43,7 @@ export default function FormCard({
 
             {isTextArea ? (
                 <textarea
+                    name={name}
                     placeholder={description}
                     defaultValue={value}
                     readOnly={readonly}
@@ -48,6 +51,7 @@ export default function FormCard({
                 />
             ) : (
                 <input 
+                    name={name}
                     type="text" 
                     placeholder={description}
                     defaultValue={value}

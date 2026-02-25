@@ -1,11 +1,14 @@
 import CustomButton from "@/components/custom-button";
 import FormCard from "@/components/form-card";
 import Heading from "@/components/heading";
+import Image from "next/image";
+import { Product } from "@/types/data"
+import { updateProduct } from "@/actions/admin/actions";
 
-const product = {nome: "Água Micelar", preco: "R$19,90", descricao: "Água Micelar"}
 
-
-export default function EditProduct() {
+export default function EditProduct({product}: {product: Product}) {
+    const updateProductWithId = updateProduct.bind(null, product?.id)  
+    
     return (
 
         <div className="
@@ -16,34 +19,52 @@ export default function EditProduct() {
         rounded-[12px]
         p-5">
 
-            <div className="flex flex-col items-center justify-center gap-2">
+            <div className="flex flex-col items-center justify-center gap-4">
                 <Heading text="Editar Produto" classNameText="font-playfair" textSize="1rem" />
                 <div className="h-[1px] w-full bg-gray-500" />
                 
-                <form action="" className="w-3/4">
+                <form action={updateProductWithId} className="w-3/4">
+                    
+                    <div className="w-full flex flex-col justify-center items-center gap-10 p-5">
+                    <Image
+                    src="/logo/Logoitblue.png"
+                    alt="Logo da empresa"
+                    width={200}
+                     height={200}
+                     className="rounded-[20px]"
+                    />
+
+                    <input
+                            type="file"
+                            className=" file:mr-4 file:rounded- file:border-0 file:bg-[#06434F] file:px-4 file:py-2 file:text-sm file:font-semibold file:text-[#aeeadd] hover:file:bg-[#2b5d67]"
+                    />
+                    </div>
+
+
                     <FormCard 
+                    name="name"
                     text="Nome" 
-                    value={product.nome}
+                    value={product.text}
                     readonly={false} />
 
                     <FormCard 
+                    name="price"
                     text="Preço" 
-                    value={product.preco}
+                    value={product.price}
                     readonly={false} />
 
                     <FormCard 
+                    name="description"
                     text="Descrição do Produto" 
                     isTextArea={true} 
-                    value={product.descricao}
+                    value={product.description}
                     maxheight="h-[300px]"
                     readonly={false} />
 
-                </form>
-
-                <div className="flex flex-row items-center gap-3">
-                    <CustomButton variant="success" href="/"> Salvar</CustomButton>
+                <div className="w-full flex justify-center items-center gap-3">
+                    <CustomButton variant="success" type="submit"> Salvar</CustomButton>
                 </div>
-
+                </form>
             </div>
         </div>
 

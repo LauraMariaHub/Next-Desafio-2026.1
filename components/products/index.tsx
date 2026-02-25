@@ -1,34 +1,28 @@
 import ProductsCard from "./card";
 import Image from "next/image";
+import { Product } from "@/types/data"
+import Pagination from "../pagination";
 
-export default function Products() {
+
+export default function Products({ produtos = [], totalPages, currentPages }: { produtos: Product[], totalPages:number, currentPages: number }) {
     return (
-        <div className="w-full h-fit gap-20px p-[1px]">
+        <div className="w-full h-fit gap-20px p-[1px] flex flex-col items-center">
             <div className="flex flex-wrap gap-6 justify-center w-full p-4">
-                <ProductsCard text="Máscara Facial" description="O boost de hidratação que sua pele merece. 
-                Tecnologia avançada para um rosto radiante, macio e protegido em apenas 15 minutos.
-                 Essencial na sua rotina semanal." preco="R$ 99,90" src="/produtos/itblueproduto3.png" />
+            {produtos.map((produto) => (
+            <ProductsCard
+              key={produto.id}
+              id={produto.id}
+              text={produto.text}
+              preco={`R$ ${produto.price.toFixed(2)}`}
+              src={produto.imageUrl ?? "/produtos/itblueproduto.png"}
+            />
+            ))}
 
-                <ProductsCard text="Máscara Facial" description="O boost de hidratação que sua pele merece. 
-                Tecnologia avançada para um rosto radiante, macio e protegido em apenas 15 minutos.
-                 Essencial na sua rotina semanal." preco="R$ 99,90" src="/produtos/itblueproduto3.png" />
-
-                <ProductsCard text="Máscara Facial" description="O boost de hidratação que sua pele merece. 
-                Tecnologia avançada para um rosto radiante, macio e protegido em apenas 15 minutos.
-                 Essencial na sua rotina semanal." preco="R$ 99,90" src="/produtos/itblueproduto3.png" />
-
-                <ProductsCard text="Máscara Facial" description="O boost de hidratação que sua pele merece. 
-                Tecnologia avançada para um rosto radiante, macio e protegido em apenas 15 minutos.
-                 Essencial na sua rotina semanal." preco="R$ 99,90" src="/produtos/itblueproduto3.png" />
-
-                <ProductsCard text="Máscara Facial" description="O boost de hidratação que sua pele merece. 
-                Tecnologia avançada para um rosto radiante, macio e protegido em apenas 15 minutos.
-                 Essencial na sua rotina semanal." preco="R$ 99,90" src="/produtos/itblueproduto3.png" />
-
-                <ProductsCard text="Máscara Facial" description="O boost de hidratação que sua pele merece. 
-                Tecnologia avançada para um rosto radiante, macio e protegido em apenas 15 minutos.
-                 Essencial na sua rotina semanal." preco="R$ 99,90" src="/produtos/itblueproduto3.png" />
             </div>
+
+            {totalPages > 1 && (
+                 <Pagination totalPages={totalPages} currentPage={currentPages} />
+            )}
 
             <Image
                 src="/details/green-coconut.png"
