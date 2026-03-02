@@ -3,6 +3,7 @@ import Heading from "../heading";
 import MVVCard from "./cards";
 import Image from "next/image";
 
+// 1. Define the shape of your data
 interface Identity {
   id: string | number;
   title: string;
@@ -10,6 +11,7 @@ interface Identity {
 }
 
 export default async function MVV() {
+  // Ideally, getIdentities() should return Promise<Identity[]>
   const data: Identity[] = await getIdentities();
 
   return (
@@ -17,7 +19,12 @@ export default async function MVV() {
       <div className="w-full pl-15 pr-15 justify-center items-center">
         <Heading 
           text="Sobre Nós" 
-          legend="A It Blue é uma marca de skincare desenvolvida para a pele contemporânea..." 
+          legend="A It Blue é uma marca de 
+            skincare desenvolvida para a pele contemporânea. Focamos em entregar 
+            soluções eficazes — da hidratação profunda ao clareamento uniforme —
+            com texturas leves e absorção inteligente. Nosso compromisso é com a 
+            transparência e a performance, garantindo que cada gota do 
+            seu ritual entregue exatamente o que a sua pele precisa para brilhar." 
           bgDark={true}
           classNameLegend="pl-20 pr-20 text-center" 
         />
