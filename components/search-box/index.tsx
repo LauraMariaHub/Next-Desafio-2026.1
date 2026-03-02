@@ -1,6 +1,6 @@
 "use client";
 import { useSearchParams } from "next/navigation";
-import { Search as SearchIcon} from "lucide-react";
+import { Search as SearchIcon } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
@@ -8,23 +8,23 @@ import { useState } from "react";
 
 export default function Search() {
 
-const searchParams = useSearchParams();
-const router = useRouter();
-const [SearchTerm, setSearchTerm] = useState<string | ''>(searchParams.get('query') || '')
-const handleSearch = (query: string) => {
-    if(!query){
-        return
+    const searchParams = useSearchParams();
+    const router = useRouter();
+    const [SearchTerm, setSearchTerm] = useState<string | ''>(searchParams.get('query') || '')
+    const handleSearch = (query: string) => {
+        if (!query) {
+            return
+        }
+
+        const params = new URLSearchParams();
+        params.set('query', query)
+        router.push(`/products?${params.toString()}`)
     }
 
-    const params = new URLSearchParams();
-    params.set('query',query)
-    router.push(`/products?${params.toString()}`)
-}
-
-const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    handleSearch(SearchTerm)
-}
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        handleSearch(SearchTerm)
+    }
 
     return (
         <form onSubmit={handleSubmit} className="w-full flex justify-center">

@@ -13,15 +13,15 @@ type ProductsCardProps = {
 export default function ProductsCard({ id, text, description, preco, src }: ProductsCardProps) {
   return (
 
-    <div className="flex flex-col h-[650px)] w-[clamp(350px,20vw,450px)]  items-center p-8 border-[1px] border-[#06434F] mt-16">
+    <div className="flex flex-col  w-[clamp(350px,20vw,450px)]  items-center p-8 border-[1px] border-[#06434F] mt-16">
 
-      <div className="">
+      <div className="relative w-[244px] h-[300px] overflow-hidden">
         <Image
           src={src}
           alt={text}
           width={244}
           height={194}
-          className="fit-cover"
+          className="object-cover"
         />
       </div>
 
@@ -34,7 +34,7 @@ export default function ProductsCard({ id, text, description, preco, src }: Prod
           {description}
         </p>
 
-        <span className= "font-urbanist font-extrabold text-center text-[#000000] text-[clamp(1.5rem,2.5vw,2.25rem)]">
+        <span className="font-urbanist font-extrabold text-center text-[#000000] text-[clamp(1.5rem,2.5vw,2.25rem)]">
           {preco}
         </span>
 

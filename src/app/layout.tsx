@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { Montserrat, Roboto, Playfair_Display, Noto_Serif, Urbanist, Noto_Serif_Telugu} from "next/font/google";
-import {  } from "next/font/google";
+import { Montserrat, Roboto, Playfair_Display, Noto_Serif, Urbanist, Noto_Serif_Telugu } from "next/font/google";
+import { } from "next/font/google";
 
 import "./globals.css";
 

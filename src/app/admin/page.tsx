@@ -4,9 +4,9 @@ import Link from "next/link";
 
 export default async function Page() {
 
-    return(
+    return (
         <div className="w-full py-12">
-            <Admin/>
+            <Admin />
         </div>
     )
 }

@@ -21,31 +21,31 @@ export default function ViewProduct({ products }: { products: Product | null }) 
                 <form action="" className="w-3/4">
 
                     <div className="w-full flex flex-col justify-center items-center gap-10 p-5">
-                    <Image
-                    src="/logo/Logoitblue.png"
-                    alt="Logo da empresa"
-                    width={200}
-                     height={200}
-                     className="rounded-[20px]"
-                    />
+                        <Image
+                            src="/logo/Logoitblue.png"
+                            alt="Logo da empresa"
+                            width={200}
+                            height={200}
+                            className="rounded-[20px]"
+                        />
                     </div>
 
-                    <FormCard 
-                    text="Nome" 
-                    value={products.text}
-                    readonly={true} />
+                    <FormCard
+                        text="Nome"
+                        value={products.text}
+                        readonly={true} />
 
-                    <FormCard 
-                    text="Preço" 
-                    value={products.price}
-                    readonly={true} />
+                    <FormCard
+                        text="Preço"
+                        value={products.price}
+                        readonly={true} />
 
-                    <FormCard 
-                    text="Descrição do Produto" 
-                    maxheight="h-[300px]"
-                    isTextArea={true} 
-                    value={products.description}
-                    readonly={true} />
+                    <FormCard
+                        text="Descrição do Produto"
+                        maxheight="h-[300px]"
+                        isTextArea={true}
+                        value={products.description}
+                        readonly={true} />
 
                 </form>
             </div>

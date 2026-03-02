@@ -1,5 +1,4 @@
 import { fetchFilterProduct } from "@/actions/search/actions";
-import Pagination from "@/components/pagination";
 import Products from "@/components/products";
 import Search from "@/components/search-box";
 
@@ -12,8 +11,8 @@ export default async function Page({ searchParams }: { searchParams: { query?: s
     return (
         <div className="w-full flex flex-col items-center justify-center gap-4 p-10">
             <Search />
-            
-            <Products produtos={products} totalPages={totalPages} currentPages={currentpage} />           
+
+            <Products produtos={products} totalPages={totalPages} currentPages={currentpage} />
         </div>
     );
 }

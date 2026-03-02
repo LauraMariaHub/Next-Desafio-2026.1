@@ -2,8 +2,8 @@ import Login from "@/components/login/index";
 
 
 export default function Page() {
-    return(
-        <div className="w-full 
+    return (
+        <div className="min-h-screen w-full 
         lg:bg-[url('/banner/ocean-background.png')] 
         lg:bg-cover 
         lg:bg-center 

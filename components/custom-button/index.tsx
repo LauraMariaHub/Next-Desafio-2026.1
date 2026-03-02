@@ -15,7 +15,7 @@ export default function CustomButton({
     href,
     type = "button",
 }: ButtonProps) {
-    
+
     // Estilos base comuns a todos
     const baseClass = "text-center font-noto font-extrabold transition-colors mt-2";
 

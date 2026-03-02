@@ -4,24 +4,24 @@ import { Product } from "@/types/data"
 import Pagination from "../pagination";
 
 
-export default function Products({ produtos = [], totalPages, currentPages }: { produtos: Product[], totalPages:number, currentPages: number }) {
+export default function Products({ produtos = [], totalPages, currentPages }: { produtos: Product[], totalPages: number, currentPages: number }) {
     return (
         <div className="w-full h-fit gap-20px p-[1px] flex flex-col items-center">
             <div className="flex flex-wrap gap-6 justify-center w-full p-4">
-            {produtos.map((produto) => (
-            <ProductsCard
-              key={produto.id}
-              id={produto.id}
-              text={produto.text}
-              preco={`R$ ${produto.price.toFixed(2)}`}
-              src={produto.imageUrl ?? "/produtos/itblueproduto.png"}
-            />
-            ))}
+                {produtos.map((produto) => (
+                    <ProductsCard
+                        key={produto.id}
+                        id={produto.id}
+                        text={produto.text}
+                        preco={`R$ ${produto.price.toFixed(2)}`}
+                        src={produto.imageUrl ?? "/produtos/itblueproduto.png"}
+                    />
+                ))}
 
             </div>
 
             {totalPages > 1 && (
-                 <Pagination totalPages={totalPages} currentPage={currentPages} />
+                <Pagination totalPages={totalPages} currentPage={currentPages} />
             )}
 
             <Image

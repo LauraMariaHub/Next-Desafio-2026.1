@@ -13,7 +13,7 @@ export async function fetchFilterProduct(query: string, currentPage: number) {
       take: itemsPerPage,
       skip: (currentPage - 1) * itemsPerPage,
     }),
-    prisma.product.count({ where }), 
+    prisma.product.count({ where }),
   ]);
 
   const totalPages = Math.ceil(totalCount / itemsPerPage);

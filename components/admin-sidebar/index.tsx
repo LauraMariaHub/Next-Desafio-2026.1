@@ -51,7 +51,7 @@ export default function AdminSideBar() {
                             onClick={toggleAdminSidebar}
                         />
                     </div>
-                    <div className="h-[1px] w-full bg-gray-500 my-4"/>
+                    <div className="h-[1px] w-full bg-gray-500 my-4" />
                     <ul className="space-y-8">
                         {LinksSideBar.map(({ href, label, icon: Icon }, index) => (
                             <li key={index}>

@@ -4,7 +4,7 @@ import prisma from "@/src/lib/db"
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 
-export async function fetchAllProducts() {
+export async function fetchAllProducts(query: string, currentPage: number) {
     try {
 
         const products = await prisma.product.findMany({

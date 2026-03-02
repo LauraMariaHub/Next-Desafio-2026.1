@@ -1,4 +1,5 @@
 import AdminSidebar from "@/components/admin-sidebar";
+import Footer from "@/components/footer";
 
 export default function AdminLayout({
   children,
@@ -8,10 +9,11 @@ export default function AdminLayout({
 }) {
   return (
     <section>
-      <AdminSidebar/>
-        <section className="px-4 py-4 sm:px-20 sm:ml-72 bg-[#06434F] min-h-screen">
-          {children}
-        </section>
+      <AdminSidebar />
+      <section className="px-4 py-4 sm:px-20 sm:ml-72 bg-[#06434F] min-h-screen">
+        {children}
+      </section>
+      <Footer />
     </section>
   );
 }

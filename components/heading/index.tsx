@@ -8,15 +8,15 @@ type HeadingProps = {
   textSize?: string;
 }
 
-export default function Heading({ 
-  text, 
-  legend, 
-  bgDark, 
+export default function Heading({
+  text,
+  legend,
+  bgDark,
   minTextSize = "1.5rem",
-  textSize = "1.87rem", 
+  textSize = "1.87rem",
   classNameLegend = "text-base text-center",
   classNameText
-  }: HeadingProps) {
+}: HeadingProps) {
 
   const bgColor = bgDark ? "text-[#BCD2DE]" : "text-[#06434F]";
 

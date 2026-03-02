@@ -6,11 +6,11 @@ import { Product } from "@/types/data";
 
 
 type BestSellersProps = {
-  produtos:Product[]
+  produtos: Product[]
 }
 
 
-export default function BestSellers({produtos}:BestSellersProps) {
+export default function BestSellers({ produtos }: BestSellersProps) {
 
   return (
     <div className="w-full space-y-12 gap-[50px] overflow-hidden relative py-10">
@@ -29,18 +29,18 @@ export default function BestSellers({produtos}:BestSellersProps) {
 
       <div className="hidden md:flex md:flex-wrap md:gap-[150px] md:justify-center">
         {produtos.map((produto) => (
-            <CompactCard
-              key={produto.id}
-              id={produto.id}
-              text={produto.text}
-              preco={`R$ ${produto.price.toFixed(2)}`}
-              src={produto.imageUrl ?? "/produtos/itblueproduto.png"}
-              hasButton={true}
-            />
-            ))}
+          <CompactCard
+            key={produto.id}
+            id={produto.id}
+            text={produto.text}
+            preco={`R$ ${produto.price.toFixed(2)}`}
+            src={produto.imageUrl ?? "/produtos/itblueproduto.png"}
+            hasButton={true}
+          />
+        ))}
       </div>
 
-     <div className="block md:hidden mt-10"> 
+      <div className="block md:hidden mt-10">
         <SwiperComponent paginationActive={false}>
           {produtos.map((produto) => (
             <CompactCard

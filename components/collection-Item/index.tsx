@@ -4,10 +4,10 @@ import SwiperComponent from "../SwiperComponent";
 import { Product } from "@/types/data";
 
 type CollectionItemProps = {
-  products:Product[]
+  products: Product[]
 }
 
-export default function CollectionItem({products}:CollectionItemProps) {
+export default function CollectionItem({ products }: CollectionItemProps) {
   return (
     <div className="w-full space-y-12 gap-[50px] py-10">
       <div>
@@ -17,12 +17,12 @@ export default function CollectionItem({products}:CollectionItemProps) {
       <div className="w-full">
         <SwiperComponent paginationActive={false}>
           {products.map((product) => (
-          <CompactCard 
-          key={product.id}
-          text={product.text} 
-          src={product.imageUrl ?? "/produtos/itblueproduto.png"} 
-          hasButton={false} />
-          
+            <CompactCard
+              key={product.id}
+              text={product.text}
+              src={product.imageUrl ?? "/produtos/itblueproduto.png"}
+              hasButton={false} />
+
           ))}
         </SwiperComponent>
       </div>
