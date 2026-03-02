@@ -38,7 +38,7 @@ export default function Table({ product, count }: { product: Product[], count: n
                     </div>
                   </div>
                 </th>
-                <th className="px-6 py-4 text-center">{product.text} 1</th>
+                <th className="px-6 py-4 text-center">{product.text}</th>
                 <th className="px-6 py-4  text-center">{product.price}</th>
                 <th className="px-6 py-4 text-center line">{product.description}</th>
                 <th className="px-7 py-8 flex items-center justify-center gap-4">

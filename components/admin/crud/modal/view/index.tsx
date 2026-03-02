@@ -22,10 +22,10 @@ export default function ViewProduct({ products }: { products: Product | null }) 
 
                     <div className="w-full flex flex-col justify-center items-center gap-10 p-5">
                         <Image
-                            src="/logo/Logoitblue.png"
+                            src={products.imageUrl}
                             alt="Logo da empresa"
-                            width={200}
-                            height={200}
+                            width={150}
+                            height={150}
                             className="rounded-[20px]"
                         />
                     </div>
