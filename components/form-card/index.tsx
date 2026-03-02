@@ -1,9 +1,8 @@
-// form-card.tsx
-import { UseFormRegister } from "react-hook-form";
+import { UseFormRegister, FieldValues, Path } from "react-hook-form";
 
-type FormCardProps = {
-    name?: string;
-    register?: UseFormRegister<any>;
+type FormCardProps<T extends FieldValues> = {
+    name: Path<T>;
+    register?: UseFormRegister<T>;
     error?: string;
     text?: string;
     description?: string;
@@ -14,7 +13,7 @@ type FormCardProps = {
     isTextArea?: boolean;
 }
 
-export default function FormCard({
+export default function FormCard<T extends FieldValues>({
     name,
     register,
     error,
@@ -25,7 +24,7 @@ export default function FormCard({
     value,
     readonly,
     isTextArea
-}: FormCardProps) {
+}: FormCardProps<T>) {
 
     const rounded = roundedActive ? "rounded-[30px]" : "rounded-[10px]";
 
@@ -40,7 +39,6 @@ export default function FormCard({
         ${readonly ? "text-[#06434F] font-montserrat font-semibold cursor-default bg-gray-50" : "bg-white"}
         ${maxheight || "h-auto"}
     `;
-
 
     const inputProps = (register && name)
         ? register(name)

@@ -3,21 +3,24 @@ import Heading from "../heading";
 import MVVCard from "./cards";
 import Image from "next/image";
 
-export default async function MVV() {
+interface Identity {
+  id: string | number;
+  title: string;
+  text: string;
+}
 
-  const data = await getIdentities();
+export default async function MVV() {
+  const data: Identity[] = await getIdentities();
 
   return (
     <div className="w-full bg-black p-10 overflow-hidden">
-
       <div className="w-full pl-15 pr-15 justify-center items-center">
-        <Heading text="Sobre Nós" legend="A It Blue é uma marca de 
-            skincare desenvolvida para a pele contemporânea. Focamos em entregar 
-            soluções eficazes — da hidratação profunda ao clareamento uniforme —
-            com texturas leves e absorção inteligente. Nosso compromisso é com a 
-            transparência e a performance, garantindo que cada gota do 
-            seu ritual entregue exatamente o que a sua pele precisa para brilhar." bgDark={true}
-          classNameLegend="pl-20 pr-20 text-center" />
+        <Heading 
+          text="Sobre Nós" 
+          legend="A It Blue é uma marca de skincare desenvolvida para a pele contemporânea..." 
+          bgDark={true}
+          classNameLegend="pl-20 pr-20 text-center" 
+        />
       </div>
 
       <Image
@@ -29,12 +32,9 @@ export default async function MVV() {
       />
 
       <div className="flex flex-wrap justify-center gap-[150px] p-10">
-
-
-        {data.slice(0, 3).map((item: any) => (
+        {data.slice(0, 3).map((item) => (
           <MVVCard key={item.id} text={item.title} description={item.text} />
         ))}
-
       </div>
     </div>
   );
