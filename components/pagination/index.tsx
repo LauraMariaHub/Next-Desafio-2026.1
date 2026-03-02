@@ -55,7 +55,14 @@ export default function Pagination({ totalPages, currentPage }: { totalPages: nu
   );
 }
 
-function PaginationNumber({ page, href, isActive, position }: any) {
+interface PaginationNumberProps {
+  page: number | string;
+  href: string;
+  isActive: boolean;
+  position?: "first" | "last" | "middle" | "single";
+}
+
+function PaginationNumber({ page, href, isActive, position }: PaginationNumberProps) {
   const className = clsx(
     "flex h-10 w-10 items-center justify-center text-sm border border-gray-300",
     {
@@ -71,7 +78,13 @@ function PaginationNumber({ page, href, isActive, position }: any) {
   return <Link href={href} className={className}>{page}</Link>;
 }
 
-function PaginationArrow({ href, direction, isDisabled }: any) {
+interface PaginationArrowProps {
+  href: string;
+  direction: "left" | "right";
+  isDisabled?: boolean;
+}
+
+function PaginationArrow({ href, direction, isDisabled }: PaginationArrowProps) {
   const className = clsx(
     "flex h-10 w-10 items-center justify-center rounded-md border border-gray-300",
     { "pointer-events-none text-gray-300": isDisabled, "hover:bg-gray-100": !isDisabled }
